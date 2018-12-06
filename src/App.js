@@ -5,11 +5,14 @@ import styled from 'styled-components';
 import { routes } from './AppRouter';
 const AppWrapper = styled.div`
   padding: 0 20px;
+  margin: auto;
+  max-width: 800px;
 `;
 const NavWrapper = styled.div`
   font-family: 'Open Sans';
   padding: 20px;
   display: grid;
+  background: lightgrey;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
 

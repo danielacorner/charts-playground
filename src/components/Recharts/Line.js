@@ -34,6 +34,11 @@ export default class RechartsLine extends Component {
   render() {
     return (
       <div>
+        <h1>Recharts Line Charts</h1>
+        <a href="http://recharts.org/en-US/examples/">
+          More examples at Recharts.org
+        </a>
+
         <LineChart width={400} height={400} data={data}>
           <Line type="monotone" dataKey="age" stroke="#8884d8" />
           <YAxis />
