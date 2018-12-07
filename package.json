@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "cssnano-util-same-parent": "^4.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
     "recharts": "^1.4.1",
-    "styled-components": "^4.1.2"
+    "styled-components": "^4.1.2",
+    "victory": "^31.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,6 +31,7 @@
   ],
   "homepage": "http://username.github.io/charts-playground",
   "devDependencies": {
+    "cssnano": "^4.1.7",
     "gh-pages": "^2.0.1"
   }
 }
