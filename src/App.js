@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import AppRouter, { routes } from './AppRouter';
 const AppWrapper = styled.div`
-  padding: 0 20px;
+  padding: 100px 40px;
   margin: auto;
   * {
     margin: 0;
@@ -13,6 +13,10 @@ const AppWrapper = styled.div`
   }
 `;
 const NavWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   font-family: 'Open Sans';
   padding: 20px;
   display: grid;
@@ -20,24 +24,35 @@ const NavWrapper = styled.div`
   background: lightgrey;
   grid-gap: 20px 10px;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  a {
+    text-decoration: none;
+    color: steelblue;
+    &:hover {
+      text-decoration: underline;
+    }
+    &.active {
+      font-weight: bold;
+    }
+  }
 `;
-
-const Navbar = () => (
-  <NavWrapper>
-    {routes.map(route => (
-      <Link to={route.path}>
-        <a>{route.name}</a>
-      </Link>
-    ))}
-  </NavWrapper>
-);
 
 class App extends Component {
   render() {
     return (
       <AppWrapper>
-        <Navbar />
         <AppRouter />
+        <NavWrapper>
+          {routes.map(route => (
+            <Link
+              getProps={({ isCurrent }) =>
+                isCurrent ? { className: 'active' } : null
+              }
+              to={route.path}
+            >
+              <a>{route.name}</a>
+            </Link>
+          ))}
+        </NavWrapper>
       </AppWrapper>
     );
   }

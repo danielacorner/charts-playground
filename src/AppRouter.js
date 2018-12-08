@@ -7,22 +7,22 @@ import Recharts from './components/Recharts/Recharts';
 import Victory from './components/Victory/Victory';
 
 export const routes = [
-  { path: '/', name: 'Recharts' },
-  { path: '/eCharts', name: 'ECharts' },
-  { path: '/victory', name: 'Victory' },
-  { path: '/timeseries', name: 'React Time Series' },
-  { path: '/nivo', name: 'Nivo' },
+  { path: '/charts-playground/', name: 'Recharts' },
+  { path: '/charts-playground/ECharts', name: 'ECharts' },
+  { path: '/charts-playground/victory', name: 'Victory' },
+  { path: '/charts-playground/timeseries', name: 'React Time Series' },
+  { path: '/charts-playground/nivo', name: 'Nivo' },
 ];
 
 export default class AppRouter extends Component {
   render() {
     return (
       <Router>
-        <Recharts path="/" />
-        <Victory path="/victory" />
-        <ECharts path="/eCharts" />
-        <ReactTimeSeries path="/timeseries" />
-        <Nivo path="/nivo" />
+        <Recharts path="/charts-playground/" />
+        <Victory path="/charts-playground/victory" />
+        <ECharts path="/charts-playground/ECharts" />
+        <ReactTimeSeries path="/charts-playground/timeseries" />
+        <Nivo path="/charts-playground/nivo" />
       </Router>
     );
   }
