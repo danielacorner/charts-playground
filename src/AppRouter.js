@@ -1,25 +1,28 @@
 import { Router } from '@reach/router';
 import React, { Component } from 'react';
-import RechartsBar from './components/Recharts/Bar';
-import RechartsLine from './components/Recharts/Line';
-import VictoryBar from './components/Victory/Bar';
-import VictoryLine from './components/Victory/Line';
+import ECharts from './components/ECharts/ECharts';
+import Nivo from './components/Nivo/Nivo';
+import ReactTimeSeries from './components/ReactTimeSeries/ReactTimeSeries';
+import Recharts from './components/Recharts/Recharts';
+import Victory from './components/Victory/Victory';
 
 export const routes = [
-  { path: '/', name: 'Recharts Line' },
-  { path: '/rechartsBar', name: 'Recharts Bar' },
-  { path: '/victoryLine', name: 'Victory Line' },
-  { path: '/victoryBar', name: 'Victory Bar' },
+  { path: '/', name: 'Recharts' },
+  { path: '/eCharts', name: 'ECharts' },
+  { path: '/victory', name: 'Victory' },
+  { path: '/timeseries', name: 'React Time Series' },
+  { path: '/nivo', name: 'Nivo' },
 ];
 
 export default class AppRouter extends Component {
   render() {
     return (
       <Router>
-        <RechartsLine path="/" />
-        <RechartsBar path="/rechartsBar" />
-        <VictoryLine path="/victoryLine" />
-        <VictoryBar path="/victoryBar" />
+        <Recharts path="/" />
+        <Victory path="/victory" />
+        <ECharts path="/eCharts" />
+        <ReactTimeSeries path="/timeseries" />
+        <Nivo path="/nivo" />
       </Router>
     );
   }

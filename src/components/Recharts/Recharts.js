@@ -19,6 +19,7 @@ import {
   default as BarChartCustomTooltip,
   default as CustomEvent,
 } from './CustomTooltip';
+import RechartsLine from './Line';
 const data = [
   { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
   { name: 'Page B', uv: 3000, pv: 1398, amt: 2210 },
@@ -37,7 +38,7 @@ const dataStackedBySign = [
   { name: 'Page F', uv: 2390, pv: -3800, amt: 2500 },
   { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
 ];
-export default class RechartsBar extends Component {
+export default class Recharts extends Component {
   state = {
     activeIndex: 0,
   };
@@ -345,6 +346,8 @@ export default class RechartsBar extends Component {
         <BarChartCustomTooltip />
           `}
         </pre>
+
+        <RechartsLine />
       </ChartsWrapper>
     );
   }

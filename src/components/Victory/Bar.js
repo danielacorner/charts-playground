@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {
+  VictoryArea,
   VictoryAxis,
   VictoryBar,
   VictoryChart,
@@ -9,11 +10,7 @@ import {
   VictoryTheme,
 } from 'victory';
 
-export const ChartsWrapper = styled.div`
-  pre {
-    background: lightgrey;
-  }
-`;
+export const ChartsWrapper = styled.div``;
 
 const data = [
   { quarter: 1, earnings: 13000 },
@@ -49,6 +46,12 @@ const data2015 = [
   { quarter: 4, earnings: 12000 },
 ];
 
+const sampleData = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+  { x: 3, y: 4 },
+  { x: 4, y: 3 },
+];
 export default class Bar extends Component {
   render() {
     return (
@@ -84,7 +87,8 @@ export default class Bar extends Component {
           />
         </VictoryChart>
         <pre>
-          {`
+          <code>
+            {`
           <VictoryChart
             // domainPadding will add space to each side of VictoryBar to
             // prevent it from overlapping the axis
@@ -111,6 +115,7 @@ export default class Bar extends Component {
             />
           </VictoryChart>
         `}
+          </code>
         </pre>
         <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
           <VictoryAxis
@@ -126,7 +131,8 @@ export default class Bar extends Component {
           </VictoryStack>
         </VictoryChart>
         <pre>
-          {`
+          <code>
+            {`
           <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
             <VictoryAxis
               tickValues={[1, 2, 3, 4]}
@@ -141,6 +147,7 @@ export default class Bar extends Component {
             </VictoryStack>
           </VictoryChart>
           `}
+          </code>
         </pre>
         <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
           <VictoryAxis
@@ -156,7 +163,8 @@ export default class Bar extends Component {
           </VictoryStack>
         </VictoryChart>
         <pre>
-          {`
+          <code>
+            {`
           <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
             <VictoryAxis
               tickValues={[1, 2, 3, 4]}
@@ -171,6 +179,7 @@ export default class Bar extends Component {
             </VictoryStack>
           </VictoryChart>
        `}
+          </code>
         </pre>
         <VictoryChart theme={VictoryTheme.material} domainPadding={10}>
           <VictoryBar
@@ -181,7 +190,8 @@ export default class Bar extends Component {
           />
         </VictoryChart>
         <pre>
-          {`
+          <code>
+            {`
           <VictoryChart theme={VictoryTheme.material} domainPadding={10}>
             <VictoryBar
               style={{ data: { fill: '#c43a31' } }}
@@ -192,6 +202,7 @@ export default class Bar extends Component {
               </VictoryChart>
 
               `}
+          </code>
         </pre>
         <div>
           <h3>Click Me</h3>
@@ -225,7 +236,8 @@ export default class Bar extends Component {
           />
         </div>
         <pre>
-          {`
+          <code>
+            {`
           <div>
           <h3>Click Me</h3>
           <VictoryBar
@@ -258,6 +270,7 @@ export default class Bar extends Component {
           />
           </div>
           `}
+          </code>
         </pre>
         <VictoryChart theme={VictoryTheme.material} domainPadding={{ y: 10 }}>
           <VictoryBar
@@ -271,7 +284,8 @@ export default class Bar extends Component {
           />
         </VictoryChart>
         <pre>
-          {`
+          <code>
+            {`
           <VictoryChart theme={VictoryTheme.material} domainPadding={{ y: 10 }}>
             <VictoryBar
               horizontal
@@ -284,6 +298,7 @@ export default class Bar extends Component {
               />
               </VictoryChart>
               `}
+          </code>
         </pre>
         <VictoryBar
           data={data}
@@ -294,7 +309,8 @@ export default class Bar extends Component {
           labelComponent={<VictoryLabel dy={30} />}
         />
         <pre>
-          {`
+          <code>
+            {`
           <VictoryBar
           data={data}
           x="quarter"
@@ -304,6 +320,7 @@ export default class Bar extends Component {
           labelComponent={<VictoryLabel dy={30} />}
           />
           `}
+          </code>
         </pre>
         <VictoryBar
           data={data}
@@ -312,7 +329,8 @@ export default class Bar extends Component {
           labels={d => `y: ${d.earnings}`}
         />
         <pre>
-          {`
+          <code>
+            {`
           <VictoryBar
             data={data}
             x="quarter"
@@ -320,6 +338,7 @@ export default class Bar extends Component {
             labels={d => \`y: \${d.earnings}\`}
             />
             `}
+          </code>
         </pre>
         <VictoryBar
           style={{
@@ -340,7 +359,8 @@ export default class Bar extends Component {
           labels={d => d.quarter}
         />
         <pre>
-          {`
+          <code>
+            {`
           <VictoryBar
             style={{
               data: {
@@ -358,9 +378,85 @@ export default class Bar extends Component {
             y="earnings"
             data={data}
             labels={d => d.quarter}
-          />
-`}
+            />
+            `}
+          </code>
         </pre>
+        <h2>standalone</h2>
+        <p>type: boolean</p>
+        <p>VictoryBar uses the standard standalone prop.</p>
+        <p>
+          Read about it{' '}
+          <a href="https://formidable.com/open-source/victory/docs/common-props/#standalone">
+            here
+          </a>
+        </p>
+        <p>
+          note: When VictoryBar is nested within a component like VictoryChart,
+          this prop will be set to false{' '}
+        </p>
+        <p>default: standalone={'{true}'}</p>
+        <svg width={300} height={300}>
+          <circle cx={150} cy={150} r={150} fill="#c43a31" />
+          <VictoryBar
+            x="quarter"
+            y="earnings"
+            standalone={false}
+            width={300}
+            height={300}
+            padding={{ left: 10, right: 10 }}
+            data={data}
+          />
+        </svg>
+        <pre>
+          <code>
+            {`
+          <svg width={300} height={300}>
+            <circle cx={150} cy={150} r={150} fill="#c43a31" />
+            <VictoryBar
+            x="quarter"
+              y="earnings"
+              standalone={false}
+              width={300}
+              height={300}
+              padding={{ left: 10, right: 10 }}
+              data={data}
+              />
+              </svg>
+          `}
+          </code>
+        </pre>
+        <svg width={300} height={300}>
+          <circle cx={150} cy={150} r={150} fill="#c43a31" />
+          <VictoryArea
+            x="quarter"
+            y="earnings"
+            standalone={false}
+            width={300}
+            height={300}
+            padding={0}
+            data={data}
+          />
+        </svg>
+        <h2>y0</h2>
+        <p>type: string || integer || array[string] || function</p>
+        <p>
+          VictoryBar uses the standard y0 data accessor prop to set a baseline.
+        </p>
+        <p>
+          Read about it{' '}
+          <a href="https://formidable.com/open-source/victory/docs/common-props#y0">
+            here
+          </a>
+        </p>
+        <VictoryChart domainPadding={30}>
+          <VictoryBar
+            // x="quarter"
+            // y="earnings"
+            data={sampleData}
+            y0={d => d.y - 1}
+          />
+        </VictoryChart>
       </ChartsWrapper>
     );
   }

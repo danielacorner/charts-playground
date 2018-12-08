@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import AppRouter from './AppRouter';
 import { Link } from '@reach/router';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { routes } from './AppRouter';
+import AppRouter, { routes } from './AppRouter';
 const AppWrapper = styled.div`
   padding: 0 20px;
   margin: auto;
-  max-width: 800px;
+  * {
+    margin: 0;
+  }
+  pre {
+    background: lightgrey;
+  }
 `;
 const NavWrapper = styled.div`
   font-family: 'Open Sans';
   padding: 20px;
   display: grid;
+  justify-items: center;
   background: lightgrey;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 `;
 
 const Navbar = () => (
