@@ -44,12 +44,13 @@ class App extends Component {
         <NavWrapper>
           {routes.map(route => (
             <Link
+              key={route.path}
               getProps={({ isCurrent }) =>
                 isCurrent ? { className: 'active' } : null
               }
               to={route.path}
             >
-              <a>{route.name}</a>
+              {route.name}
             </Link>
           ))}
         </NavWrapper>

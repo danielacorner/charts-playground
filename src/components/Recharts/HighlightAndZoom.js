@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import {
-  Label,
-  LineChart,
-  Line,
   CartesianGrid,
+  Line,
+  LineChart,
+  ReferenceArea,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  ReferenceArea,
 } from 'recharts';
 
 const data = [
@@ -112,14 +110,13 @@ export default class HighlightAndZoom extends React.Component {
       top: 'dataMax+1',
       bottom: 'dataMin',
       top2: 'dataMax+50',
-      bottom: 'dataMin+50',
+      bottom2: 'dataMin+50',
     }));
   }
 
   render() {
     const {
       data,
-      barIndex,
       left,
       right,
       refAreaLeft,

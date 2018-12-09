@@ -23,9 +23,9 @@ export default class ECharts extends Component {
         </h1>
         <p>
           Pass in a large "options" config object to a
-          <pre style={{ display: 'inline', margin: '0 6px' }}>
-            <code>{`<ReactEcharts option={this.getOption()} />`}</code>
-          </pre>
+          <code
+            style={{ display: 'inline', margin: '0 6px' }}
+          >{`<ReactEcharts option={this.getOption()} />`}</code>
           component
         </p>
         <h2>

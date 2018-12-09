@@ -1,17 +1,17 @@
+import React, { Component } from 'react';
 import {
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  LabelList,
+  Legend,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  LabelList,
 } from 'recharts';
-import React, { Component } from 'react';
 
 const renderCustomizedLabel = props => {
-  const { x, y, width, height, value } = props;
+  const { x, y, width, value } = props;
   const radius = 10;
 
   return (

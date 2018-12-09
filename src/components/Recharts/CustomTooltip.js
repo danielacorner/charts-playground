@@ -1,14 +1,13 @@
+import React, { Component } from 'react';
 import {
-  BarChart,
   Bar,
-  Cell,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
 } from 'recharts';
-import React, { Component } from 'react';
 
 const data = [
   { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },

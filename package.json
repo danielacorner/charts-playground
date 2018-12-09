@@ -8,9 +8,12 @@
     "cssnano-util-same-parent": "^4.0.1",
     "echarts": "^4.2.0-rc.2",
     "echarts-for-react": "^2.0.15-beta.0",
+    "now": "^12.1.9",
+    "pondjs": "^0.8.9",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
+    "react-timeseries-charts": "^0.15.5",
     "recharts": "^1.4.1",
     "styled-components": "^4.1.2",
     "victory": "^31.0.1"
@@ -21,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "now-build": "react-scripts build && mv build dist"
   },
   "eslintConfig": {
     "extends": "react-app"
