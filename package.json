@@ -12,6 +12,7 @@
     "pondjs": "^0.8.9",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-google-charts": "^3.0.10",
     "react-scripts": "2.1.1",
     "react-timeseries-charts": "^0.15.5",
     "recharts": "^1.4.1",
