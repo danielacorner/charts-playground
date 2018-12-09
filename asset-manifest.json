@@ -1,13 +1,13 @@
 {
-  "main.css": "/charts-playground/static/css/main.c8375871.chunk.css",
-  "main.js": "/charts-playground/static/js/main.8c27ec83.chunk.js",
-  "main.js.map": "/charts-playground/static/js/main.8c27ec83.chunk.js.map",
-  "static/js/1.bbf548ea.chunk.js": "/charts-playground/static/js/1.bbf548ea.chunk.js",
-  "static/js/1.bbf548ea.chunk.js.map": "/charts-playground/static/js/1.bbf548ea.chunk.js.map",
+  "main.css": "/charts-playground/static/css/main.114d6bd1.chunk.css",
+  "main.js": "/charts-playground/static/js/main.80ab0443.chunk.js",
+  "main.js.map": "/charts-playground/static/js/main.80ab0443.chunk.js.map",
+  "static/js/1.cb82d9cc.chunk.js": "/charts-playground/static/js/1.cb82d9cc.chunk.js",
+  "static/js/1.cb82d9cc.chunk.js.map": "/charts-playground/static/js/1.cb82d9cc.chunk.js.map",
   "runtime~main.js": "/charts-playground/static/js/runtime~main.2f418e9a.js",
   "runtime~main.js.map": "/charts-playground/static/js/runtime~main.2f418e9a.js.map",
-  "static/css/main.c8375871.chunk.css.map": "/charts-playground/static/css/main.c8375871.chunk.css.map",
+  "static/css/main.114d6bd1.chunk.css.map": "/charts-playground/static/css/main.114d6bd1.chunk.css.map",
   "index.html": "/charts-playground/index.html",
-  "precache-manifest.b4aa16f281bfe3b3d4664d80ba321d54.js": "/charts-playground/precache-manifest.b4aa16f281bfe3b3d4664d80ba321d54.js",
+  "precache-manifest.903ef51826ea0454652afb5621bc52ca.js": "/charts-playground/precache-manifest.903ef51826ea0454652afb5621bc52ca.js",
   "service-worker.js": "/charts-playground/service-worker.js"
 }
