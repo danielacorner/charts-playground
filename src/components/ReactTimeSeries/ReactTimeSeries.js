@@ -10,6 +10,7 @@ import {
 } from 'react-timeseries-charts';
 import styled from 'styled-components';
 import Bar from './Bar';
+import BrushPanExample from './BrushPanExample';
 import Realtime from './Realtime';
 
 const ChartsWrapper = styled.div`
@@ -125,11 +126,11 @@ export default class ReactTimeSeries extends Component {
             handling time series data
           </h3>
         </div>
-        <h4>
+        <h2>
           <a href="http://software.es.net/react-timeseries-charts/#/api/charts/EventChart">
             EventChart
           </a>
-        </h4>
+        </h2>
         <div>
           <Resizable>
             <ChartContainer
@@ -273,11 +274,11 @@ export default class ReactTimeSeries extends Component {
           )}
         </div>
         <div>
-          <h4>
+          <h2>
             <a href="http://software.es.net/react-timeseries-charts/#/api/charts/EventChart">
               Realtime chart
             </a>
-          </h4>
+          </h2>
 
           <Realtime />
           <button onClick={() => this.toggleVisibility('realtimeChartVisible')}>
@@ -523,11 +524,19 @@ export default class Realtime extends React.Component {
           )}
         </div>
         <div>
-          <h4>
+          <h2>
             <a href="https://software.es.net/react-timeseries-charts/#/example/volume">
+              Brush-Pan example
+            </a>
+          </h2>
+          <BrushPanExample />
+        </div>
+        <div>
+          <h2>
+            <a href="http://software.es.net/react-timeseries-charts/#/example/cycling">
               Bar charts
             </a>
-          </h4>
+          </h2>
           <Bar />
         </div>
       </ChartsWrapper>
